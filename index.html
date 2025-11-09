@@ -6,14 +6,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    document.getElementById('menu-button').onclick = function() {
+        // Get the mobile menu element
+        const menu = document.getElementById('mobile-menu');
+        
+        // Toggle the 'hidden' class to show/hide the menu
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+        } else {
+            menu.classList.add('hidden');
+        }
+    };
+</script>
     <style>
         
          .hero-bg {
             background-image:url(banner.png.webp) ;
             background-size: cover;
             background-position: center;
-            min-height: 50vh;
-            margin: 0 0 15px 15px;
+            min-height: 70vh;
+
         } 
     </style>
 </head>
@@ -48,6 +61,14 @@
             Make an Appointment
         </a>
       <button class="lg:hidden text-2xl text-blue-300">☰</button>
+           <ul id="mobile-menu" class="hidden flex-col space-y-4 py-4 px-6 bg-doc-light lg:hidden text-gray-600 font-medium">
+    <li><a href="#" class="block hover:text-blue-950 transition duration-300">Home</a></li>
+    <li><a href="#" class="block hover:text-blue-950 transition duration-300">Department</a></li>
+    <li><a href="#" class="block hover:text-blue-950 transition duration-300">Blog</a></li>
+    <li><a href="#" class="block hover:text-blue-950 transition duration-300">Pages</a></li>
+    <li><a href="#" class="block hover:text-blue-950 transition duration-300">Doctors</a></li>
+    <li><a href="#" class="block hover:text-blue-950 transition duration-300">Contact</a></li>
+</ul>
      </nav>
     </header>
       <div class="hero-bg relative">
@@ -325,3 +346,4 @@
        </body>
 
 </html>
+
